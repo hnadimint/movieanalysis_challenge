@@ -67,12 +67,12 @@ object MovieDataAnalyzer {
       .option("inferSchema", true)
       .option("escape", "\"")
       .option("multiLine", true)
-      .csv("src/main/resources/movies_metadata.csv")
-
+      .csv(args(0))
+       
     // load the wikipedia abstract dataset
     val wikipediaDF = spark.read.format("xml")
       .option("rowTag", "doc")
-      .load("src/main/resources/enwiki-latest-abstract.xml")
+      .load(args(1))
 
     // 1. For each film, calculate the ratio of budget to revenue
     // compute the ratio for every valid movie record
