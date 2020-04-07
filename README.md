@@ -6,7 +6,9 @@ I have used Spark with Scala framework to implement this challenge as the wikipe
 How to run this:
 1) Any linux/windows system with Spark and PostgreSQL installed
 2) Clone the project and run sbt build to create the jar file
-3) Use spark-submit to run the application using the above jar in the cluster mode
+3) Use spark-submit to run the application using the above jar in the cluster mode with the following application arguments
+   a. IMDB movies csv data set
+   b. wikipedia abstract xml data set
 4) Post the completion of the application, query the data in PostgreSQL using psql interface.
 
 How to query data:
